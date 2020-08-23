@@ -16,7 +16,7 @@ In realife, we don't have much time to monitor the product price that we are int
     - your desired price of products. pre-set value for all products to add in list
     - in case of getting email, 2-step password of you email. In this project, I used gmail
 
-## 4. learned
+## 4. Learned
     - Scraping information on website using BeautifulSoup
     - Sending email using smtplib module in Python
 
