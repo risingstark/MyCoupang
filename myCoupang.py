@@ -26,11 +26,45 @@ class MyCoupang:
         write url and desired price into input file
         '''
         f = open("/Users/seankim/Desktop/Sean's file/github/MyCoupang/input.txt", "a")
-        content = url.strip() + "<SEP>" + str(des_price).strip() + "\n"
+        title,price = self.url_get_title_price(url)
+        content = url.strip() + "<SEP>" + title + "<SEP>" + str(des_price).strip() + "\n"
+        # if price >= des_price:
+        #     self.send_email(url)
         f.write(content)
         f.close()
         return
 
+    def delete_product(self, title):
+        '''(MyCoupang, str) -> bool
+        return true iff product info is removed from input file given title
+        '''
+        
+        deleted = False
+        f = open("/Users/seankim/Desktop/Sean's file/github/MyCoupang/input.txt", "r")
+        lines = f.readlines()
+        f.close()
+
+        f = open("/Users/seankim/Desktop/Sean's file/github/MyCoupang/input.txt", "w")
+        for line in lines:
+            if title != line.split("<SEP>")[1].strip():
+                f.write(line)
+                deleted = True
+            elif title == line.split("<SEP>")[1].strip():
+                print("Title:",title,"is removed")
+        f.close()
+        return deleted
+        
+
+    def show_products(self):
+        '''(MyCoupang) -> none
+        show all products in input file
+        '''
+
+        f = open("/Users/seankim/Desktop/Sean's file/github/MyCoupang/input.txt", "r")
+        for line in f:
+            print("Title:",line.split("<SEP>")[1].strip(),", Desired Price:",line.split("<SEP>")[2].strip())
+        f.close()
+        return
 
     def url_get_title_price(self, url):
         '''(MyCoupang, list) -> (str, int)
@@ -48,7 +82,7 @@ class MyCoupang:
         
         return title,price
 
-    def send_mail(self,url):
+    def send_email(self,url):
         '''(MyCoupang, str) -> None
         send notification email with messgae 
         '''
@@ -88,12 +122,12 @@ class MyCoupang:
         down = False
         url_list = self.get_urls()
         for url in url_list:
-            url,des_price = url.split("<SEP>")[0], int(url.split("<SEP>")[1])
+            url,des_price = url.split("<SEP>")[0], int(url.split("<SEP>")[2])
             title,real_price = self.url_get_title_price(url)
             if real_price <= des_price:
                 print(title, " price fell down")
                 down = True
-                self.send_mail(url)
+                self.send_email(url)
         if not down:
             print("nothing")
         return
@@ -110,7 +144,7 @@ class MyCoupang:
             print("1. Check price of the products already have")
             print("2. Add new product with URL and desired price")
             print("3. Delete product")
-            print("4. Iist of all products you are interested in")
+            print("4. List of all products you are interested in")
             print("5. Quit")
             print("----------------------------------------------")
             input_value = input("Please type NUMBER to select given option!\n")
@@ -122,14 +156,34 @@ class MyCoupang:
                 self.price_check()
                 print('\n')
             elif option == 2: # ADD NEW PRODUCT
+                done = False
+                while not done:
+                    input_url = input("Please type URL you want to add!\n")
+                    des_price = input("Please type desired price!\n")
+                    try:
+                        des_price = int(des_price)
+                    except ValueError:
+                        print("{input} is not a number, please enter a number only".format(input=input_value))
+                    else:
+                        self.add_url_price(input_url,des_price)
+                        done = True
+                        print("product is added")
                 print('\n')
-                return
             elif option == 3: # DELETE PRODUCT
-                print('\n')
-                return
+                
+                self.show_products()
+                done = False
+                while not done:
+                    # deleted is boolean variable
+                    input_delete = input("Please type title to remove!\n")
+                    deleted = self.delete_product(input_delete)
+                    if deleted:
+                        done = True
+                    else:
+                        print("{input} is not existed in product list, please re-enter title".format(input=input_value))
             elif option == 4: # SHOW ALL PRODUCT
+                self.show_products()
                 print('\n')
-                return
             elif option == 5: # QUIT
                 print('\n')
                 return

@@ -1,3 +1,4 @@
-https://www.coupang.com/vp/products/8838078?itemId=99053681&vendorItemId=3180840758&q=%ED%94%84%EB%A1%9C%ED%8B%B4&itemsCount=40&searchId=1b54ebbd11a14bbe97ba595914abc632&rank=3&isAddedCart=<SEP>50000
-https://www.coupang.com/vp/products/286729457?itemId=908960893&vendorItemId=5275291565&q=%EB%B9%84%ED%83%80%EB%AF%BC&itemsCount=40&searchId=876d3fefe5e044b19e4b35c1de80c692&rank=1&isAddedCart=<SEP>7000
-https://www.coupang.com/vp/products/658230?itemId=2349453&vendorItemId=3002411787&sourceType=SDP_ADS&isAddedCart=<SEP>16000
+https://www.coupang.com/vp/products/8838078?itemId=99053681&vendorItemId=3180840758&q=%ED%94%84%EB%A1%9C%ED%8B%B4&itemsCount=40&searchId=1b54ebbd11a14bbe97ba595914abc632&rank=3&isAddedCart=<SEP>Protein<SEP>50000
+https://www.coupang.com/vp/products/286729457?itemId=908960893&vendorItemId=5275291565&q=%EB%B9%84%ED%83%80%EB%AF%BC&itemsCount=40&searchId=876d3fefe5e044b19e4b35c1de80c692&rank=1&isAddedCart=<SEP>Vitamin D<SEP>7000
+https://www.coupang.com/vp/products/658230?itemId=2349453&vendorItemId=3002411787&sourceType=SDP_ADS&isAddedCart=<SEP>Zinc<SEP>16000
+https://www.coupang.com/vp/products/1915964877?vendorItemId=71240050699&channel=plp_C2&isAddedCart=<SEP>브이티코스메틱 슈퍼 히알론 슬리핑 마스크<SEP>600000
