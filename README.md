@@ -6,9 +6,9 @@ In realife, we don't have much time to monitor the product price that we are int
   
 ## 2. Feature
     - simple text-based interface on terminal
-    - addition of product (in progress)
-    - delete product (in progress)
-    - show list of products (in progress)
+    - addition of product 
+    - delete product 
+    - show list of products
     - send email notification
 
 ## 3. Requirements
