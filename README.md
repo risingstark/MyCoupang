@@ -2,12 +2,12 @@
 This is a simple-side-project to keep track of product price on Coupang.
 
 ## 1. Purpose
-In realife, we don't have much time to monitor the product price that we are interested in. MyCoupang helps this issue without checking website but comparing real-price and desired price you set. Hope to save time and get you what you want! As we all know, time is money...
+In realife, we don't have much time to monitor the product price that we are interested in. MyCoupang helps this issue without checking website but comparing real-price and desired price you set. Hope to save time and get you what you want! As all we know, time is money...
   
 ## 2. Feature
     - simple text-based interface on terminal
-    - addition of product 
-    - delete product 
+    - addition of product
+    - delete product
     - show list of products
     - send email notification
 
